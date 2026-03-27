@@ -2,7 +2,7 @@
     <head>
         <title> Grayson-Jorden-Pavel</title>
 
-        <meta name="viewport" content="initial-scale=1, maximum-scale=1, userscalabe=no">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
 
         <!-- Includes the Mapbox GL JS CSS stylesheet -->
         <link href="https://api.mapbox.com/mapbox-gl-js/v3.20.0/mapbox-gl.css" rel="stylesheet">
@@ -10,15 +10,15 @@
         <!-- Imports the Mapbox GL JS bundle -->
         <script src="https://api.mapbox.com/mapbox-gl-js/v3.20.0/mapbox-gl.js"></script>
         <style>
-            body {margin: 10; padding: 10;}
-            #map {position: absolute; top: 10; bottom: 10; width: 50%;}
+            body {margin: 10px; padding: 10px;}
+            #map {position: absolute; top: 10px; bottom: 10px; width: 50%;}
         </style>
     </head>
     <body>
-        <div id=" "map"></div>
+        <div id="map"></div>
         <script>
             mapboxgl.accessToken = '${{ secrets.MAPBOX_SECRET_TOKEN }}'
-            const map = mapboxgl.Map
+            const map = new mapboxgl.Map
                 ({
                  container: 'map',
                  style: 'mapbox://styles/mapbox/satellite-streets-v12'
